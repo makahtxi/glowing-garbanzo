@@ -1,0 +1,54 @@
+body {
+    text-align: center;
+}
+
+.input {
+    margin: auto;
+    width: 70%;
+    background-color: blueviolet;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    padding: 0.5rem;
+}
+div .posting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titlewrite{
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+.titlewrite input{
+  height: 1.5rem;
+  width:90%;
+  padding: 10px
+}
+
+.textwrite {
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+.textwrite textarea{
+    height: 2rem;
+    width: 90%;
+    height: 90%;
+    padding: 10px;
+}
+
+.submit {
+    height: 2rem;
+    align-self: center;
+    justify-self: center;
+    width:5rem;
+    background-color: pink;
+    color:black;
+    border: 1px solid white;
+}

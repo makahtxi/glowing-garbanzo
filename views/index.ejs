@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+
+    <h1>My Personal Blog</h1>
+    <a href="/new">
+        <button href="/new"> New Entry</button>
+    </a>
+    <% if(locals.posts) {%>
+        <% for(i=0; i<posts.length; i++){ %>
+            <div class="posting">
+                <h1><%= locals.posts[i].title %></h1>
+                <p><%= locals.posts[i].body %></p>
+                    <form action="/startEdit" method="POST">
+                        <input type="hidden" name="postId" value="<%= i %>" />
+                        <button>Edit</button>
+                    </form>
+                    <form action="/delete"  method="POST">
+                        <input type="hidden" name="postId" value="<%= i %>" />
+                        <button type="submit" >Delete</button>
+                    </form>
+            </div>
+        <% } %>
+    <% } %>
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs") %>
+<body>
+    
+    <form class="input" action="/edit" method="POST">
+            <input type="hidden" name="postId" value="<%= postToEdit %>" />
+        <div class="titlewrite posting">
+            <label for="title"></label>
+            <input type="text"  name="title" required value="<%= locals.posts[postToEdit].title %>">
+        </div>
+        <div class="textwrite posting">
+            <label for="text" </label>
+            <textarea for="text" name="text" required > <%= locals.posts[postToEdit].body %></textarea>
+        </div>
+        <div class="posting">
+            <input class="button submit" type="submit" value="Submit">
+        </div>
+    </form>
+
+<%- include("partials/footer.ejs") %>
